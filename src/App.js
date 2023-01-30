@@ -50,12 +50,14 @@ const myRecipeSearch =(e)=>{
              <h1>Find a recipe</h1>
                <form onSubmit={finalSearch}>
                <input className="search" placeholder="Search..." onChange={myRecipeSearch} value={mySearch}></input>
+           
+        
+              <button >My meal today...</button>
               </form>
-              <button onClick={finalSearch}>My meal today...</button>
             </div>
-            <div  >
-              {myRecipes.map(element =>(
-                <RecipeSearch label={element.recipe.label}
+            <div >
+              {myRecipes.map((element,index) =>(
+                <RecipeSearch  key={index} label={element.recipe.label}
                                image={element.recipe.image}
                                ingredient={element.recipe.ingredientLines }
                                colories={element.recipe.calories }

@@ -89,6 +89,7 @@ width:250px;
 .list{
   display: flex;
   justify-content: row;
+  flex-wrap: wrap;
 
 border-radius: 5%;
   
@@ -104,9 +105,16 @@ width:800px;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
 h4,h5{
   font-family: 'Yusei Magic', sans-serif;
   text-decoration: overline;
   color:#e1d9d5
+}
+
+@media all and (max-width:500px){
+.list{
+  width:400px;
+}
 }

@@ -7,8 +7,8 @@ function RecipeSearch({label,image,ingredient,colories,weight}){
            </div>
            <div className="listRight">
                <ul>
-                   {ingredient.map(components=>(
-                       <li>{components}</li>
+                   {ingredient.map((components,id)=>(
+                       <li key={id}>{components}</li>
                    ))}
                </ul>
                <h4>{colories.toFixed()} Calories</h4>
